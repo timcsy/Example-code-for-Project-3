@@ -116,8 +116,9 @@ GreenBird::GreenBird(float x, float y, float radius, QTimer *timer, QPixmap pixm
 
 void GreenBird::feature()
 {
-    g_body->ApplyForceToCenter(b2Vec2(-20000,0),true);
-    g_body->ApplyTorque(-10000,true);
+    float32 vx = g_body->GetLinearVelocity().x;
+    g_body->ApplyForceToCenter(b2Vec2(((vx>=0)?-1:1)*20000,0),true);
+    g_body->ApplyTorque(((vx>=0)?-1:1)*10000,true);
 }
 
 BlackBird::BlackBird(float x, float y, float radius, QTimer *timer, QPixmap pixmap, QList<GameItem*> g_itemList, QWidget *_callparent, b2World *world, QGraphicsScene *scene)

@@ -50,8 +50,6 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         graphicsView = new QGraphicsView(centralWidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
-        graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
         horizontalLayout->addWidget(graphicsView);
 

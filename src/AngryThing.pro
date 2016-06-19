@@ -16,7 +16,10 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     gameitem.cpp \
     bird.cpp \
-    land.cpp
+    land.cpp \
+    shooter.cpp \
+    barrier.cpp \
+    enemy.cpp
 
 HEADERS  += mainwindow.h \
     Box2D/Collision/Shapes/b2ChainShape.h \
@@ -68,7 +71,10 @@ HEADERS  += mainwindow.h \
     Box2D/Box2D.h \
     gameitem.h \
     bird.h \
-    land.h
+    land.h \
+    shooter.h \
+    barrier.h \
+    enemy.h
 
 FORMS    += mainwindow.ui
 
